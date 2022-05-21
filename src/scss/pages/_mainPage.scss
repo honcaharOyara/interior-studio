@@ -1,0 +1,137 @@
+.banner {
+  height: 744px;
+  &__content-container,
+  &__slider-container {
+    width: 100%;
+    height: 744px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__content-container {
+    padding-top: 279px;
+    z-index: 3;
+    background-color: rgba($black, 0.24);
+  }
+
+  &__title {
+    font-size: rem(56px);
+    line-height: rem(68px);
+  }
+
+  &__project-link-box {
+    padding: 0 10px;
+    position: relative;
+    width: fit-content;
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: rgba($white, 1);
+        transition: background-color 0.2s ease;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba($white, 0.24);
+    }
+
+    &::before {
+      width: 8px;
+      right: 100%;
+    }
+
+    &::after {
+      content: "";
+      width: 56px;
+      left: 100%;
+    }
+  }
+
+  &__slider-container {
+    z-index: 2;
+  }
+
+  &__slider-btn-prev,
+  &__slider-btn-next {
+    padding: 0 25px;
+    width: 137px;
+    position: relative;
+    border: 0;
+    background-color: initial;
+
+    &:hover {
+      &::after {
+        background-color: rgba($white, 1);
+      }
+    }
+
+    &:active {
+      &::after {
+        background-color: rgba($white, 0.24);
+      }
+    }
+
+    &-number {
+      color: $white;
+      font-size: rem(11px);
+      line-height: rem(23px);
+      letter-spacing: 0.06r em;
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      width: 30px;
+    }
+
+    &::after {
+      content: "";
+      width: 90px;
+      height: 1px;
+      background-color: rgba($white, 0.24);
+      transition: background-color 0.2s ease;
+    }
+  }
+
+  &__slider-btn-prev {
+    text-align: start;
+
+    &::before {
+      content: url("../img/icons/icons.svg#arrow-left");
+      left: 0;
+    }
+
+    &::after {
+      right: -2px;
+    }
+  }
+
+  &__slider-btn-next {
+    text-align: end;
+
+    &::before {
+      content: url("../img/icons/icons.svg#arrow-right");
+      right: 0;
+    }
+
+    &::after {
+      left: -2px;
+    }
+  }
+}

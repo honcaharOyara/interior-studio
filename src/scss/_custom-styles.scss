@@ -1,0 +1,46 @@
+@import "./functionality/vars";
+
+body {
+  overflow-x: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-transparent {
+  letter-spacing: 0.06rem;
+
+  &,
+  &:active,
+  &:focus {
+    background-color: initial;
+    border-color: rgba($white, 0.32);
+  }
+
+  &:hover {
+    background-color: rgba($white, 0.2);
+    border-color: rgba($white, 1);
+  }
+}
+
+.btn-black {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+
+  &,
+  &:active,
+  &:focus {
+    background-color: rgba($popup_title, 1);
+  }
+
+  &:hover {
+    background-color: rgba($popup_title, 0.9);
+  }
+}

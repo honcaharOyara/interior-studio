@@ -1,0 +1,217 @@
+@import "../functionality/vars";
+
+.popup {
+  &__btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transition: opacity 0.2s ease;
+    background: url("../img/icons/icons.svg#close") center / 50px auto no-repeat;
+  }
+
+  &__dialog {
+    max-width: 1046px;
+    width: 100%;
+  }
+
+  &__content {
+    padding: 56px 123px;
+    background-color: $popup_bg;
+  }
+
+  &__form-block {
+    width: 100%;
+    padding: 44px 70px;
+
+    &:first-child {
+      margin: 0 0 6px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    width: 100%;
+    font-size: rem(22px);
+    line-height: rem(28px);
+    text-align: center;
+    color: $popup_title;
+  }
+
+  &__input {
+    margin-bottom: 40px;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06rem;
+    font-weight: $font-weight-bold;
+    color: $popup_title;
+    border: none;
+    border-bottom: 1px solid $input_border_color;
+    border-radius: 0;
+  }
+
+  &__input:hover,
+  &__input:active,
+  &__input:focus {
+    border-color: $popup_title;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  &__check-wrap {
+    margin-bottom: 52px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 8px;
+      display: block;
+      width: 95%;
+      height: 1px;
+      background-color: $input_border_color;
+    }
+  }
+
+  &__check-title {
+    margin-bottom: 24px;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06rem;
+    font-weight: $font-weight-bold;
+  }
+
+  &__check-label {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: fit-content;
+    font-size: rem(9px);
+    font-weight: $font-weight-normal;
+    line-height: rem(11px);
+    letter-spacing: 0.06rem;
+    color: rgba($popup_title, 0.45);
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  &__check {
+    margin: 0 auto !important;
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    width: 18px;
+    height: 18px;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__custom-check {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    z-index: 1;
+    margin: 0 auto;
+    width: 18px;
+    height: 18px;
+    background-color: $check_bg_color;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $check_dot_color;
+    }
+  }
+  &__check:checked + &__custom-check {
+    border: 1px solid $white;
+    background-color: $check_bg_color_checked;
+    box-shadow: 0px 2px 8px rgba($black, 0.3);
+
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+  }
+
+  &__file-label,
+  &__file-input {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &__file-label {
+    left: 50px;
+    z-index: 1;
+    font-weight: $font-weight-bold;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06em;
+
+    &-warrior {
+      margin-top: 5px;
+      display: block;
+      font-weight: $font-weight-normal;
+      font-size: rem(9px);
+      line-height: rem(11px);
+      letter-spacing: 0.06em;
+      color: rgba($popup_title, 0.45);
+    }
+
+    &-warrior.invalid {
+      color: red;
+    }
+
+    &::before {
+      content: url("../img/icons/icons.svg#plus");
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: -50px;
+      width: 40px;
+      height: 40px;
+      font-size: rem(13px);
+      line-height: rem(40px);
+      text-align: center;
+      color: $popup_title;
+      background-color: $check_bg_color;
+      border: 1px solid rgb($popup_title, 0.08);
+      border-radius: 50%;
+      transition: background-color 0.2s ease;
+    }
+  }
+
+  &__file-input {
+    width: 144px;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__file-input:hover + &__file-label {
+    &::before {
+      background-color: rgba($popup_title, 0.6);
+    }
+  }
+
+  &__info {
+    font-size: rem(10px);
+    line-height: rem(14px);
+    letter-spacing: 0.06em;
+    color: $popup_info;
+  }
+}

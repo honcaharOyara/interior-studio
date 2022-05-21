@@ -2,13 +2,9 @@ const { src, dest, watch, series, parallel, task } = require("gulp");
 const connect = require("gulp-connect");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass")(require("sass"));
-const autoprefixer = require("gulp-autoprefixer");
 const htmlmin = require("gulp-htmlmin");
 const fileInclude = require("gulp-file-include");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const webphtml = require("gulp-webp-html");
-const webpcss = require("gulp-webp-css");
 const svgSprite = require("gulp-svg-sprite");
 const webpack = require("webpack-stream");
 const ttf2woff = require("gulp-ttf2woff");
@@ -48,7 +44,6 @@ const path = {
 function buildHtml(srcPath, buildPath) {
   return src(srcPath)
     .pipe(fileInclude())
-    .pipe(webphtml({}))
     .pipe(
       htmlmin({
         collapseWhitespace: true,
@@ -60,8 +55,8 @@ function buildHtml(srcPath, buildPath) {
 }
 
 async function htmlHandler() {
-  await buildHtml(srcHtmlIndex, buildHtmlIndex);
-  await buildHtml(srcHtmlPages, buildHtmlPages);
+  buildHtml(srcHtmlIndex, buildHtmlIndex);
+  buildHtml(srcHtmlPages, buildHtmlPages);
 }
 
 function buildStyles() {
@@ -69,13 +64,6 @@ function buildStyles() {
     .pipe(
       sass({
         outputStyle: "compressed",
-      })
-    )
-    .pipe(webpcss())
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 5 versions"],
-        cascade: true,
       })
     )
     .pipe(rename("style.css"))
@@ -104,18 +92,11 @@ function buildJs() {
 function buildImg() {
   return src(path.src.img)
     .pipe(
-      webp({
-        quality: 70,
-      })
-    )
-    .pipe(dest(path.build.img))
-    .pipe(src(path.src.img))
-    .pipe(
       imagemin({
         progressive: true,
         svgoPlugins: [{ removeViewBox: false }],
         interlaced: true,
-        optimizationLeve: 3,
+        optimizationLeve: 1,
       })
     )
     .pipe(dest(path.build.img))
@@ -143,14 +124,6 @@ function buildFonts() {
     .pipe(ttf2woff2())
     .pipe(dest(path.build.fonts))
     .pipe(connect.reload());
-}
-
-function startLocalServer() {
-  connect.server({
-    root: "dest",
-    port: 7070,
-    livereload: true,
-  });
 }
 
 async function fontsStyle() {
@@ -181,7 +154,15 @@ async function fontsStyle() {
   }
 }
 
-async function cb() {}
+function cb() {}
+
+function startLocalServer() {
+  connect.server({
+    root: "dest",
+    port: 8888,
+    livereload: true,
+  });
+}
 
 function watchCode() {
   watch(path.watch.scss, buildStyles);
@@ -200,10 +181,10 @@ exports.build = series(
 );
 
 exports.default = series(
-  buildFonts,
-  fontsStyle,
   buildStyles,
   htmlHandler,
+  buildFonts,
+  fontsStyle,
   buildJs,
   buildImg,
   parallel(startLocalServer, watchCode)

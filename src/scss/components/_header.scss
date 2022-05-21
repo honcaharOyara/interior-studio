@@ -1,0 +1,46 @@
+@import "../functionality/functions";
+
+.header {
+  transition: background-color 0.2s ease;
+
+  &.bg-dark-transparent {
+    background-color: rgba($black, 0.6);
+  }
+
+  &__container {
+    padding: 0 64px;
+  }
+
+  &__logo {
+    line-height: rem(17px);
+    letter-spacing: 0.3rem;
+  }
+
+  &__navbar-list {
+    max-width: 340px;
+    width: 100%;
+  }
+
+  &__link,
+  &__lang-btn {
+    font-size: rem(11px);
+    letter-spacing: 0.06rem;
+  }
+
+  &__lang-btn {
+    border: none;
+    background-color: initial;
+  }
+
+  &__dropdown-menu {
+    min-width: initial;
+    width: fit-content;
+    border-radius: 0;
+    background-color: #fff;
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+  }
+}

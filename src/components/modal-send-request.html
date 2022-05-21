@@ -1,0 +1,266 @@
+<div
+  class="modal fade popup"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <button
+    type="button"
+    class="btn-close popup__btn-close"
+    data-bs-dismiss="modal"
+    aria-label="Close"
+  ></button>
+  <div class="modal-dialog popup__dialog">
+    <div class="modal-content popup__content">
+      <div class="modal-body">
+        <form class="js-form-calc">
+          <div class="row bg-white popup__form-block">
+            <h5
+              class="modal-title fw-bolder popup__title"
+              id="exampleModalLabel"
+            >
+              Calculate the cost of work
+            </h5>
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control popup__input js-input"
+                placeholder="Name"
+                data-key="name"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control popup__input js-input"
+                placeholder="Last name"
+                data-key="lastName"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="number"
+                class="form-control popup__input js-input"
+                placeholder="Phone"
+                data-key="phone"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control popup__input js-input"
+                placeholder="Your city"
+                data-key="city"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                class="form-control popup__input js-input"
+                placeholder="Email"
+                data-key="email"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <select
+                id="inputState"
+                class="form-select popup__input js-input"
+                data-key="propertyType"
+              >
+                <option selected>Property type</option>
+                <option>Property type 1</option>
+                <option>Property type 2</option>
+                <option>Property type 3</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <input
+                type="text"
+                class="form-control popup__input js-input"
+                placeholder="Your comment"
+                data-key="comment"
+              />
+            </div>
+          </div>
+
+          <div class="bg-white popup__form-block">
+            <h6 class="popup__check-title">Area (m2)</h6>
+            <div class="row justify-content-between popup__check-wrap">
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  to 50
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-input"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="50"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  50-100
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-check"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="50-100"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  150-250
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-check"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="150-250"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  250-400
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-check"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="250-400"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  400-600
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-check"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="400-600"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  600-800
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-check"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="600-800"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  800-1000
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-check"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="800-1000"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+              <div class="col-1 form-check text-center p-0 position-relative">
+                <label
+                  class="form-check-label popup__check-label"
+                  for="exampleRadios2"
+                >
+                  1000+
+                </label>
+                <input
+                  class="form-check-input float-none popup__check js-check"
+                  type="radio"
+                  name="exampleRadios"
+                  id="exampleRadios2"
+                  data-key="area"
+                  value="1000+"
+                />
+                <div class="popup__custom-check"></div>
+              </div>
+            </div>
+
+            <div class="row mb-5">
+              <div class="col-6 d-flex position-relative">
+                <input
+                  class="form-control popup__file-input js-input-file"
+                  id="formFileLg"
+                  type="file"
+                  data-key="files"
+                />
+                <label for="formFileLg" class="form-label popup__file-label">
+                  Attach your file
+                  <span class="popup__file-label-warrior js-warrior"
+                    >File size not more than 10 MB</span
+                  >
+                </label>
+              </div>
+              <div class="col-6">
+                <button type="submit" class="btn btn-black popup__btn">
+                  Send Request
+                </button>
+              </div>
+            </div>
+            <p class="text-center popup__info">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

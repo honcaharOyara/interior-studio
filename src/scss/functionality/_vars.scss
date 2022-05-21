@@ -1,0 +1,48 @@
+// Fonts bootstrap settings
+$font-family-sans-serif: "Montserrat-Medium";
+$font-size-root: 14px;
+$font-weight-lighter: 300;
+$font-weight-light: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+$line-height-base: 1.7;
+
+// Buttons bootstrap settings
+$btn-padding-y: 17px;
+$btn-padding-x: 48px;
+$btn-font-size: 0.78571rem;
+$btn-line-height: 1;
+$btn-border-radius: 0;
+$btn-border-width: 1px;
+$btn-focus-box-shadow: none;
+$btn-focus-width: none;
+
+// Navbar bootstrap settings
+$navbar-padding-y: 24px;
+$navbar-brand-font-size: $font-size-root;
+$navbar-brand-height: 17px;
+$navbar-light-color: rgba($white, 0.7);
+$navbar-light-hover-color: rgba($white, 1);
+$navbar-light-active-color: rgba($white, 0.9);
+$navbar-light-disabled-color: rgba($black, 0.3);
+$navbar-light-toggler-border-color: rgba($black, 0.1);
+$navbar-light-brand-color: $navbar-light-color;
+$navbar-light-brand-hover-color: $navbar-light-active-color;
+
+$dropdown-bg: none;
+$dropdown-border-color: none;
+
+// Modal
+$modal-dialog-margin-y-sm-up: 40px;
+$modal-content-border-radius: 0;
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+
+$popup_title: rgba(58, 62, 75, 1);
+$popup_info: rgba(175, 176, 178, 1);
+$popup_bg: #f2f2f2;
+$input_border_color: rgba(214, 214, 214, 0.3);
+$check_dot_color: #afb0b2;
+$check_bg_color: #f7f7f6;
+$check_bg_color_checked: #1d1f26;

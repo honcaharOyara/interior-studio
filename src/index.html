@@ -6,9 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interor studio</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
   </head>
   <body>
     @@include('./components/header.html')
-    <h1>Hello</h1>
+    <main>
+      <section class="position-relative banner">
+        <div class="position-absolute banner__content-container">
+          <div class="container-fluid">
+            <div class="row mb-5">
+              <div class="col-2"></div>
+              <div class="col-5">
+                <h1 class="text-white fw-bolder banner__title">
+                  Thoughtful making of space
+                </h1>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-2"></div>
+              <div class="col-3">
+                <div class="banner__project-link-box">
+                  <a
+                    class="text-white text-uppercase text-decoration-none banner__"
+                    href="#"
+                    >discover more</a
+                  >
+                </div>
+              </div>
+              <div class="col-2"></div>
+              <div class="col-4 banner__slider-btn-box">
+                <button class="banner__slider-btn-prev">
+                  <span
+                    class="fw-lighter text-white banner__slider-btn-prev-number"
+                    >02</span
+                  >
+                </button>
+                <button class="banner__slider-btn-next">
+                  <span
+                    class="fw-lighter text-white banner__slider-btn-next-number"
+                    >04</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-absolut banner__slider-container">
+          <div class="swiper banner__slider">
+            <div class="swiper-wrapper banner__slider-wrap">
+              <div class="swiper-slide banner__slide">
+                <img
+                  class="banner__slide-img"
+                  src="./img/main_banner-bg.jpg"
+                  alt="Banner slide"
+                />
+              </div>
+              <div class="swiper-slide banner__slide">
+                <img
+                  class="banner__slide-img"
+                  src="./img/main_banner-bg.jpg"
+                  alt="Banner slide"
+                />
+              </div>
+              <div class="swiper-slide banner__slide">
+                <img
+                  class="banner__slide-img"
+                  src="./img/main_banner-bg.jpg"
+                  alt="Banner slide"
+                />
+              </div>
+              <div class="swiper-slide banner__slide">
+                <img
+                  class="banner__slide-img"
+                  src="./img/main_banner-bg.jpg"
+                  alt="Banner slide"
+                />
+              </div>
+              <div class="swiper-slide banner__slide">
+                <img
+                  class="banner__slide-img"
+                  src="./img/main_banner-bg.jpg"
+                  alt="Banner slide"
+                />
+              </div>
+              <div class="swiper-slide banner__slide">
+                <img
+                  class="banner__slide-img"
+                  src="./img/main_banner-bg.jpg"
+                  alt="Banner slide"
+                />
+              </div>
+              <div class="swiper-slide banner__slide">
+                <img
+                  class="banner__slide-img"
+                  src="./img/main_banner-bg.jpg"
+                  alt="Banner slide"
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

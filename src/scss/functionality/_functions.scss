@@ -1,0 +1,5 @@
+@import "./vars";
+
+@function rem($val) {
+  @return calc($val / $font-size-root) * 1rem;
+}
