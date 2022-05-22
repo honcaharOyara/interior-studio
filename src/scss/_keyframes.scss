@@ -1,0 +1,11 @@
+@import "./functionality/vars";
+
+@keyframes color {
+  0% {
+    color: rgba($white, 0.4);
+  }
+
+  100% {
+    color: rgba($white, 1);
+  }
+}

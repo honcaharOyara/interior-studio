@@ -1,5 +1,44 @@
 @import "../functionality/vars";
 
+.popup__preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup__preloader.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__logo,
+.popup__loading {
+  font-weight: $font-weight-lighter;
+  font-size: rem(24px);
+  line-height: rem(29px);
+  letter-spacing: 0.26em;
+  color: white;
+  animation: color 1.5s infinite;
+  animation-direction: alternate-reverse;
+}
+
+.popup__logo {
+  width: 39px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.popup__loading {
+  transition: all 0.2s ease;
+}
+
 .popup {
   &__btn-close {
     position: absolute;

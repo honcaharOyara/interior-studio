@@ -1,4 +1,6 @@
 import refs from "./refs";
+const bootstrap = require("bootstrap");
+const myModal = new bootstrap.Modal(refs.modalCalcWork);
 
 export function formHandler(e) {
   e.preventDefault();
@@ -10,6 +12,7 @@ export function formHandler(e) {
   getFormData(inputs, radios, files);
   target.reset();
   refs.formWarrior.innerHTML = "File size not more than 10 MB";
+  fakeSendData();
 }
 
 export function filevalidation(e) {
@@ -34,6 +37,34 @@ export function filevalidation(e) {
       }
     }
   }
+}
+
+export function fakeSendData() {
+  const backdrop = document.querySelector(".modal-backdrop");
+  let counter = 30;
+
+  myModal.hide();
+  refs.modalPreloader.classList.add("show");
+
+  let iintervalId = setInterval(() => {
+    refs.modalPreloaderLoading.innerHTML = `${counter}%`;
+    counter++;
+
+    if (counter > 100) {
+      clearInterval(iintervalId);
+    }
+  }, 28);
+
+  setTimeout(() => {
+    refs.modalPreloaderLoading.style.opacity = "0";
+    refs.modalPreloaderLogo.style.width = "144px";
+  }, 2000);
+
+  setTimeout(() => {
+    refs.modalPreloader.classList.remove("show");
+    refs.body.style = "";
+    backdrop.remove();
+  }, 3000);
 }
 
 function getFormData(inputs, radios, files) {
