@@ -1,31 +1,25 @@
-@@include('./modal-send-request.html')
+@@include('./window-modal-send-request.html')
 <header class="header fixed-top js-header">
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light header__nav">
     <div class="container-fluid header__container">
-      <div class="w-100 row justify-content-between">
-        <div class="col-2">
           <a
             class="navbar-brand text-uppercase text-white fw-light header__logo"
             href="#"
-            >LOGO</a
+            >HILIGHT</a
           >
-        </div>
-        <div class="col-1">
           <button
-            class="navbar-toggler"
+            class="navbar-toggler header__toggle-btn js-toggler-btn"
             type="button"
-            data-bs-toggle="collapse"
+            data-bs-toggle="offcanvas"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+          <span class="header__burger-icon js-toggler-icon"></span>
           </button>
-        </div>
-        <div class="col-5">
           <div
-            class="collapse navbar-collapse w-100"
+            class="fade navbar-fade header__navbar-list-box"
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav justify-content-between header__navbar-list">
@@ -47,9 +41,10 @@
                 <a class="nav-link fw-bold header__link" href="#">Contacts</a>
               </li>
             </ul>
+            <div class=" header__navbar-contact">
+              @@include('./block-contacts.html')
+            </div>
           </div>
-        </div>
-        <div class="col-1">
           <div class="dropdown header__dropdown">
             <button
               class="text-white fw-bold border-none header__lang-btn"
@@ -69,17 +64,14 @@
               <li><a class="dropdown-item" href="#">Ua</a></li>
             </ul>
           </div>
-        </div>
-        <div class="col-3">
           <button
             type="button"
-            class="btn fw-bold btn-primary btn-transparent header__btn"
+            class="btn fw-bold btn-primary btn-transparent header__popup-btn"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
             Send Request
           </button>
-        </div>
       </div>
     </div>
   </nav>

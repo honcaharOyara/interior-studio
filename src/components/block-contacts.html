@@ -1,0 +1,48 @@
+<div class="row contact">
+  <div class="col-sm-6 col-lg-2 contact__social-wrap">
+    @@include('./block-socials.html')
+  </div>
+  <div class="col-sm-6 col-lg-2 contact__dropdown-wrap">
+    <div class="dropdown">
+      <button
+        class="btn select-city__btn"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Kiyv
+      </button>
+      <ul
+        class="dropdown-menu select-city"
+        aria-labelledby="dropdownMenuButton1"
+      >
+        <li>
+          <a
+            class="dropdown-item select-city__option"
+            href="#"
+            data-phone="+491513527547"
+            >Berlin</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item select-city__option"
+            href="#"
+            data-phone="+487883527547"
+            >Wroclaw</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item select-city__option"
+            href="#"
+            data-phone="+380983527547"
+            >Kiyv</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-12 col-lg-4">@@include('./block-contact-link.html')</div>
+</div>

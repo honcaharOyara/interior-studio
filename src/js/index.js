@@ -1,8 +1,8 @@
-import "bootstrap/dist/js/bootstrap.bundle";
-import debounce from "lodash.debounce";
-import "./swiper-settings";
 import refs from "./refs";
-import { formHandler, filevalidation, fakeSendData } from "./form-handler";
+import debounce from "lodash.debounce";
+import { formHandler, filevalidation } from "./form-handler";
+import "./swiper-settings";
+import "./bootstrap-settings";
 
 window.addEventListener("scroll", debounce(headerBgHandler, 100));
 refs.formCaclWork.addEventListener("submit", formHandler);

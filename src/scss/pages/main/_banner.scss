@@ -1,0 +1,215 @@
+.h-744px {
+  padding-bottom: 15px;
+  height: 744px;
+}
+
+.banner {
+  &__content-container,
+  &__slider-container {
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__content-container {
+    z-index: 3;
+    background-color: rgba($black, 0.24);
+  }
+
+  &__title {
+    max-width: 475px;
+    margin-top: 279px;
+    font-size: rem(56px);
+    line-height: rem(68px);
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__title {
+      margin-top: 179px;
+    }
+
+    &__contacts {
+      display: none;
+    }
+  }
+
+  &__slider-container {
+    z-index: 2;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__slier-btn-wrap {
+      display: none !important;
+    }
+  }
+
+  &__slider-btn-prev,
+  &__slider-btn-next {
+    padding: 0 25px;
+    width: 137px;
+    position: relative;
+    border: 0;
+    background-color: initial;
+
+    &:hover {
+      &::after {
+        background-color: rgba($white, 1);
+      }
+    }
+
+    &:active {
+      &::after {
+        background-color: rgba($white, 0.24);
+      }
+    }
+
+    &-number {
+      color: $white;
+      font-size: rem(11px);
+      line-height: rem(23px);
+      letter-spacing: 0.06r em;
+    }
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+
+    &::before {
+      width: 35px;
+      height: 26px;
+    }
+
+    &::after {
+      content: "";
+      width: 90px;
+      height: 1px;
+      background-color: rgba($white, 0.24);
+      transition: background-color 0.2s ease;
+    }
+  }
+
+  &__slider-btn-prev {
+    text-align: start;
+
+    &::before {
+      content: "";
+      background: url("../img/icons/icons.svg#arrow-left") center no-repeat;
+      left: 0;
+    }
+
+    &::after {
+      right: 0px;
+    }
+  }
+
+  &__slider-btn-next {
+    text-align: end;
+
+    &::before {
+      content: "";
+      background: url("../img/icons/icons.svg#arrow-right") center no-repeat;
+      right: 0;
+    }
+
+    &::after {
+      left: 0px;
+    }
+  }
+
+  &__side-box {
+    right: -17px;
+    bottom: 138px;
+    z-index: 100;
+    transform: rotateZ(-90deg);
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__side-box {
+      display: none;
+    }
+  }
+
+  &__side-text {
+    color: $white;
+    font-weight: $font-weight-bold;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    text-align: start;
+    letter-spacing: 0.06em;
+  }
+
+  &__side-img {
+    max-width: 318px;
+    width: 100%;
+  }
+}
+
+.select-city {
+  &,
+  &__btn {
+    width: fit-content;
+    height: fit-content;
+    font-weight: $font-weight-bold;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06em;
+    color: rgba($white, 0.8);
+    background-color: rgba($white, 0.3);
+    box-shadow: 0px 1.15336px 1.22544px rgba(0, 0, 0, 0.2),
+      inset 0px -0.288339px 0.0720847px rgba(255, 255, 255, 0.23);
+    backdrop-filter: blur(2px);
+    border-radius: rem(9px);
+  }
+
+  &__btn {
+    padding: 5px 51px 5px 30px;
+    position: relative;
+
+    &:hover {
+      color: rgba($white, 1);
+      background-color: rgba($white, 0.5);
+
+      &::after {
+        transform: translateY(-50%) rotateZ(-180deg);
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 13px;
+      transition: transform 0.2s ease;
+    }
+
+    &::before {
+      left: 13px;
+      background: url("../img/icons/icons.svg#location") center / cover;
+    }
+
+    &::after {
+      right: 13px;
+      background: url("../img/icons/icons.svg#arrow-bottom") center / cover;
+    }
+  }
+
+  &__option {
+    color: rgba($white, 0.8);
+
+    &:hover {
+      color: $white;
+      background-color: initial;
+    }
+  }
+}

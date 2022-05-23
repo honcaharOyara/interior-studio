@@ -1,14 +1,32 @@
 @import "../functionality/functions";
 
 .header {
-  transition: background-color 0.2s ease;
+  max-width: 100%;
+  width: 100%;
+  transition: all 0.2s ease;
 
   &.bg-dark-transparent {
     background-color: rgba($black, 0.6);
   }
 
   &__container {
-    padding: 0 64px;
+    padding: 0 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__container {
+      padding: 0 64px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .navbar {
+      padding: 10px 0;
+    }
+
+    &__logo {
+      display: none;
+    }
   }
 
   &__logo {
@@ -16,9 +34,72 @@
     letter-spacing: 0.3rem;
   }
 
+  &__toggle-btn {
+    position: relative;
+    z-index: 2000;
+    width: 50px;
+    height: 30px;
+
+    &,
+    &:active,
+    &:focus {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__burger-icon {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+      transition: transform 0.2s ease;
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+
+    &.show {
+      background-color: initial;
+
+      &::before {
+        top: 0;
+        transform: rotateZ(45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+
+  &__navbar-list-box,
   &__navbar-list {
     max-width: 340px;
     width: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__navbar-list-box:not(.show) {
+      opacity: 1;
+    }
   }
 
   &__link,
@@ -28,6 +109,8 @@
   }
 
   &__lang-btn {
+    position: relative;
+    z-index: 2000;
     border: none;
     background-color: initial;
   }
@@ -36,11 +119,56 @@
     min-width: initial;
     width: fit-content;
     border-radius: 0;
+    z-index: 2000;
     background-color: #fff;
   }
 
-  &__btn {
-    display: block;
-    margin-left: auto;
+  &__popup-btn {
+    position: relative;
+    z-index: 2000;
+  }
+
+  &__navbar-contact {
+    display: none;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__navbar-list-box {
+      padding: 20px;
+      width: 100%;
+      position: absolute;
+      top: -100px;
+      left: 0;
+      right: 0;
+      z-index: 2000;
+      visibility: hidden;
+      transition: top 0.2s ease;
+      background-color: rgba($white, 0.3);
+    }
+
+    &__navbar-list-box.show {
+      top: 100px;
+      visibility: visible;
+    }
+
+    &__navbar-list {
+      margin-bottom: 30px;
+    }
+
+    &__link {
+      font-size: 20px;
+    }
+
+    &__navbar-contact {
+      display: block;
+    }
+  }
+
+  .offcanvas-backdrop {
+    background-color: rgba($black, 0.9);
+
+    &.show {
+      opacity: 1;
+    }
   }
 }

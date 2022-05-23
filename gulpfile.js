@@ -93,10 +93,10 @@ function buildImg() {
   return src(path.src.img)
     .pipe(
       imagemin({
-        progressive: true,
+        // progressive: true,
         svgoPlugins: [{ removeViewBox: false }],
-        interlaced: true,
-        optimizationLeve: 1,
+        // interlaced: true,
+        optimizationLeve: 0,
       })
     )
     .pipe(dest(path.build.img))

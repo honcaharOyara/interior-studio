@@ -1,6 +1,5 @@
 import refs from "./refs";
-const bootstrap = require("bootstrap");
-const myModal = new bootstrap.Modal(refs.modalCalcWork);
+import { myModal } from "./bootstrap-settings";
 
 export function formHandler(e) {
   e.preventDefault();

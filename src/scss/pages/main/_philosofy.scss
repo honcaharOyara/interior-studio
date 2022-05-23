@@ -1,0 +1,111 @@
+.philosofy {
+  padding: 220px 0 140px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 100px 0 140px;
+
+    &__block-1 {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__block-1 {
+    margin-bottom: 262px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__block-1 {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text-s,
+  &__text-m {
+    color: rgba($sectin_text_color, 0.7);
+    font-weight: $font-weight-lighter;
+  }
+
+  &__text-s {
+    font-size: rem(14px);
+    line-height: rem(24px);
+
+    &:first-child {
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__text-m {
+    max-width: 70%;
+    font-size: rem(20px);
+    line-height: 1.7;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -50px;
+      top: 0;
+      width: 33px;
+      height: 20px;
+      background: url("../img/icons/icons.svg#quotes") center / cover;
+    }
+  }
+
+  &__img-box {
+    img {
+      width: 100%;
+    }
+
+    &--fixed-side {
+      width: fit-content;
+      position: absolute;
+      top: -80px;
+      right: -160px;
+
+      img {
+        max-width: 513px;
+      }
+    }
+
+    &--fixed-center {
+      width: fit-content;
+      position: absolute;
+      top: -131px;
+      right: -206px;
+
+      img {
+        max-width: 279px;
+      }
+    }
+
+    &--no-fixed {
+      img {
+        max-width: 317px;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      &--fixed-side {
+        display: none;
+      }
+
+      &--no-fixed {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &--no-fixed {
+        display: none;
+      }
+    }
+  }
+}

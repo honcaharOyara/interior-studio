@@ -10,6 +10,13 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.section-title {
+  font-weight: $font-weight-bolder;
+  font-size: rem(36px);
+  line-height: rem(44px);
+  color: #080808;
+}
+
 .btn-transparent {
   letter-spacing: 0.06rem;
 
@@ -42,5 +49,88 @@ input::-webkit-inner-spin-button {
 
   &:hover {
     background-color: rgba($popup_title, 0.9);
+  }
+}
+
+.socials {
+  &__item {
+    margin-right: 16px;
+    list-style: none;
+  }
+
+  &__link {
+    font-weight: $font-weight-bold;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06em;
+    color: rgba($white, 1);
+
+    &:hover {
+      color: rgba($white, 0.7);
+    }
+  }
+}
+
+.discover-link-box {
+  padding: 0 10px;
+  position: relative;
+  width: fit-content;
+
+  &.--white {
+    a {
+      color: $white;
+    }
+
+    &::before,
+    &::after {
+      background-color: rgba($white, 0.24);
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: rgba($white, 1);
+      }
+    }
+  }
+
+  &.--black {
+    a {
+      color: $black;
+    }
+
+    &::before,
+    &::after {
+      background-color: rgba($black, 0.24);
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: rgba($black, 1);
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease;
+  }
+
+  &::before {
+    width: 8px;
+    right: 100%;
+  }
+
+  &::after {
+    content: "";
+    width: 56px;
+    left: 100%;
   }
 }

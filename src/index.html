@@ -9,49 +9,53 @@
     <script defer src="./js/script.js"></script>
   </head>
   <body>
-    @@include('./components/header.html')
+    @@include('./components/section-header.html')
     <main>
-      <section class="position-relative banner">
-        <div class="position-absolute banner__content-container">
-          <div class="container-fluid">
-            <div class="row mb-5">
-              <div class="col-2"></div>
-              <div class="col-5">
-                <h1 class="text-white fw-bolder banner__title">
-                  Thoughtful making of space
-                </h1>
-              </div>
-            </div>
-            <div class="row justify-content-center">
-              <div class="col-2"></div>
-              <div class="col-3">
-                <div class="banner__project-link-box">
-                  <a
-                    class="text-white text-uppercase text-decoration-none banner__"
-                    href="#"
-                    >discover more</a
+      <section class="position-relative banner h-744px">
+        <div class="position-absolute banner__content-container h-744px">
+          <div class="container-fluid h-744px">
+            <div class="row flex-column justify-content-between h-744px">
+              <div class="row justify-content-center align-items-center mb-5">
+                <div class="col-sm-7">
+                  <h1 class="text-white fw-bolder banner__title">
+                    Thoughtful making of space
+                  </h1>
+                </div>
+                <div class="row justify-content-center">
+                  <div
+                    class="col-lg-3 d-flex justify-content-sm-center justify-content-lg-end"
                   >
+                    <div class="discover-link-box --white">
+                      <a class="text-uppercase text-decoration-none" href="#"
+                        >discover more</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-6 d-flex justify-content-lg-end banner__slier-btn-wrap"
+                  >
+                    <button class="banner__slider-btn-prev">
+                      <span
+                        class="fw-lighter text-white banner__slider-btn-prev-number"
+                        >02</span
+                      >
+                    </button>
+                    <button class="banner__slider-btn-next">
+                      <span
+                        class="fw-lighter text-white banner__slider-btn-next-number"
+                        >04</span
+                      >
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="col-2"></div>
-              <div class="col-4 banner__slider-btn-box">
-                <button class="banner__slider-btn-prev">
-                  <span
-                    class="fw-lighter text-white banner__slider-btn-prev-number"
-                    >02</span
-                  >
-                </button>
-                <button class="banner__slider-btn-next">
-                  <span
-                    class="fw-lighter text-white banner__slider-btn-next-number"
-                    >04</span
-                  >
-                </button>
+              <div class="row banner__contacts">
+                @@include('./components/block-contacts.html')
               </div>
             </div>
           </div>
         </div>
-        <div class="position-absolut banner__slider-container">
+        <div class="position-absolute banner__slider-container h-744px">
           <div class="swiper banner__slider">
             <div class="swiper-wrapper banner__slider-wrap">
               <div class="swiper-slide banner__slide">
@@ -104,7 +108,64 @@
                 />
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="position-absolute banner__side-box">
+          <p class="banner__side-text">Next Project</p>
+          <img
+            class="banner__side-img"
+            src="./img/icons/icons.svg#perfect_proportions"
+            alt="perfect_proportions"
+          />
+        </div>
+      </section>
+      <section class="philosofy">
+        <div class="container-xl position-relative">
+          <div class="row philosofy__block-1">
+            <div class="col-lg-6">
+              <h2 class="section-title philosofy__title">Company Philosophy</h2>
+              <p class="philosofy__text-s">
+                The basic philosophy of our studio is to create individual,
+                aesthetically stunning solutions for our customers by
+                lightning-fast development of projects employing unique styles
+                and architecture. Even if you don't have a ready sketch of what
+                you want - we will help you get the result.
+              </p>
+              <p class="philosofy__text-s">
+                We can also help you create harmony out of seemingly completely
+                incompatible elements in the interior or the exterior design. Do
+                you want to combine classics and abstract art? Modern and retro?
+                Love everything associated with the 1940's? No problem!
+              </p>
+              <div class="discover-link-box --black">
+                <a class="text-uppercase text-decoration-none" href="#"
+                  >discover more</a
+                >
+              </div>
+            </div>
+            <div class="philosofy__img-box--fixed-side">
+              <img src="./img/main_phil-img-1.jpg" alt="Image side" />
+            </div>
+          </div>
+          <div class="row philosofy__block-2">
+            <div
+              class="col-lg-6 d-flex justify-content-sm-start justify-content-md-center justify-content-lg-start"
+            >
+              <div class="philosofy__img-box--no-fixed position-relative">
+                <img src="./img/main_phil-img-3.jpg" alt="Picture" />
+                <div class="philosofy__img-box--fixed-center">
+                  <img src="./img/main_phil-img-2.jpg" alt="Picture" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-6 d-flex justify-content-center align-items-center"
+            >
+              <p class="philosofy__text-m position-relative">
+                We can also help you create harmony out of seemingly completely
+                incompatible elements in the interior or the exterior design.
+              </p>
+            </div>
           </div>
         </div>
       </section>

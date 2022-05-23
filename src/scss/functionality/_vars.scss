@@ -1,3 +1,11 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1046px,
+  xxl: 1320px,
+);
+
 // Fonts bootstrap settings
 $font-family-sans-serif: "Montserrat-Medium";
 $font-size-root: 14px;
@@ -7,6 +15,8 @@ $font-weight-normal: 500;
 $font-weight-bold: 600;
 $font-weight-bolder: 700;
 $line-height-base: 1.7;
+
+$sectin_text_color: rgba(8, 8, 8, 1);
 
 // Buttons bootstrap settings
 $btn-padding-y: 17px;

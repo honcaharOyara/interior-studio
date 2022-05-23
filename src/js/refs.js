@@ -2,6 +2,8 @@ export default {
   body: document.querySelector("body"),
   header: document.querySelector(".js-header"),
 
+  dropdowns: document.querySelectorAll(".dropdown"),
+
   slider: document.querySelector(".banner__slider"),
   sliderBtnPrev: document.querySelector(".banner__slider-btn-prev"),
   sliderBtnNext: document.querySelector(".banner__slider-btn-next"),
