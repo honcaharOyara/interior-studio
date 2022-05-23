@@ -1,5 +1,9 @@
 @import "../functionality/functions";
-
+.modal-open {
+  .header {
+    padding-right: 17px;
+  }
+}
 .header {
   max-width: 100%;
   width: 100%;

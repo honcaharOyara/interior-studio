@@ -174,18 +174,18 @@ function watchCode() {
 exports.build = series(
   buildFonts,
   fontsStyle,
-  buildStyles,
+  buildImg,
   htmlHandler,
-  buildJs,
-  buildImg
+  buildStyles,
+  buildJs
 );
 
 exports.default = series(
-  buildStyles,
-  htmlHandler,
   buildFonts,
   fontsStyle,
-  buildJs,
   buildImg,
+  htmlHandler,
+  buildStyles,
+  buildJs,
   parallel(startLocalServer, watchCode)
 );

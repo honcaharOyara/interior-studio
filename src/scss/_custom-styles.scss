@@ -10,6 +10,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.h-744px {
+  height: 744px;
+}
+
 .section-title {
   font-weight: $font-weight-bolder;
   font-size: rem(36px);
@@ -17,9 +21,37 @@ input::-webkit-inner-spin-button {
   color: #080808;
 }
 
-.btn-transparent {
-  letter-spacing: 0.06rem;
+.btn-white,
+.btn-transparent,
+.btn-black {
+  padding: 17px 48px;
+  font-weight: $font-weight-bold;
+  font-size: rem(11px);
+  line-height: rem(13px);
+  text-align: center;
+  letter-spacing: 0.06em;
+}
 
+.btn-white {
+  background-color: $white;
+  color: rgba($black, 1);
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: rgba($white, 0.7);
+  }
+
+  &,
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.btn-transparent {
   &,
   &:active,
   &:focus {

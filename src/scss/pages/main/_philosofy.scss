@@ -2,7 +2,7 @@
   padding: 220px 0 140px;
 
   @include media-breakpoint-down(lg) {
-    padding: 100px 0 140px;
+    padding: 100px 0 50px;
 
     &__block-1 {
       margin-bottom: 100px;
