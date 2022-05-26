@@ -118,13 +118,14 @@
   &__check-wrap {
     margin-bottom: 52px;
     position: relative;
+    flex: 0 0 49%;
 
     &::before {
       content: "";
       position: absolute;
       top: 24px;
       display: block;
-      width: calc(100% - 9px);
+      width: calc(100% - 2px);
       height: 1px;
       background-color: $input_border_color;
     }
@@ -145,6 +146,12 @@
       &::before {
         right: 20px;
       }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__check-wrap {
+      flex: 0 0 100%;
     }
   }
 
@@ -269,14 +276,15 @@
 
     &::before {
       content: url("../img/icons/icons.svg#plus");
+      padding: 5px;
       display: block;
       position: absolute;
       top: -5px;
       left: -50px;
       width: 40px;
       height: 40px;
-      font-size: rem(13px);
-      line-height: rem(40px);
+      font-size: rem(20px);
+      line-height: rem(30px);
       text-align: center;
       color: $popup_title;
       background-color: $check_bg_color;

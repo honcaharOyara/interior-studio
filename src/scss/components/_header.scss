@@ -4,17 +4,17 @@
     padding-right: 17px;
   }
 }
+
 .header {
   max-width: 100%;
   width: 100%;
   transition: all 0.2s ease;
-
-  &.bg-dark-transparent {
-    background-color: rgba($black, 0.6);
-  }
-
   &__container {
     padding: 0 20px;
+  }
+
+  .navbar {
+    padding: 10px 0;
   }
 
   @include media-breakpoint-up(lg) {
@@ -24,18 +24,16 @@
   }
 
   @include media-breakpoint-down(lg) {
-    .navbar {
-      padding: 10px 0;
-    }
-
     &__logo {
       display: none;
     }
   }
 
   &__logo {
-    line-height: rem(17px);
-    letter-spacing: 0.3rem;
+    svg {
+      max-width: 100px;
+      width: 100%;
+    }
   }
 
   &__toggle-btn {
@@ -58,7 +56,6 @@
     display: block;
     width: 100%;
     height: 1px;
-    background-color: $white;
 
     &::before,
     &::after {
@@ -67,7 +64,6 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      background-color: $white;
       transition: transform 0.2s ease;
     }
 
@@ -124,7 +120,7 @@
     width: fit-content;
     border-radius: 0;
     z-index: 2000;
-    background-color: #fff;
+    background-color: $white;
   }
 
   &__popup-btn {
@@ -173,6 +169,92 @@
 
     &.show {
       opacity: 1;
+    }
+  }
+}
+
+.header.white {
+  &.bg-transparent {
+    background-color: rgba($black, 0.6) !important;
+  }
+
+  .header__logo {
+    svg {
+      path {
+        fill: $white;
+      }
+
+      rect {
+        stroke: $white;
+        fill: none;
+      }
+    }
+  }
+
+  .header__burger-icon {
+    background-color: $white !important;
+
+    &::before,
+    &::after {
+      background-color: $white !important;
+    }
+  }
+  .header__lang-btn,
+  .header__link {
+    color: rgba($white, 0.8) !important;
+
+    &:hover {
+      color: rgba($white, 1) !important;
+    }
+  }
+
+  .header__popup-btn {
+    color: rgba($white, 1) !important;
+    border-color: rgba($white, 1) !important;
+  }
+}
+
+.black.header {
+  &.bg-transparent {
+    background-color: rgba($white, 0.6) !important;
+  }
+
+  .header__logo {
+    svg {
+      path {
+        fill: $black;
+      }
+
+      rect {
+        stroke: $black;
+        fill: none;
+      }
+    }
+  }
+
+  .header__burger-icon {
+    background-color: $black !important;
+
+    &::before,
+    &::after {
+      background-color: $black !important;
+    }
+  }
+  .header__lang-btn,
+  .header__link {
+    color: rgba($black, 0.6) !important;
+
+    &:hover {
+      color: rgba($black, 1) !important;
+    }
+  }
+
+  .header__popup-btn {
+    color: rgba($black, 1) !important;
+    border-color: rgba($black, 1) !important;
+
+    &:hover {
+      background-color: rgba($black, 0.2) !important;
     }
   }
 }

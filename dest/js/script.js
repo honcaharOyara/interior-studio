@@ -8810,15 +8810,17 @@ const bannerSliderOptions = {
   simulateTouch: false,
 };
 
-const bannerSlider = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_refs__WEBPACK_IMPORTED_MODULE_0__["default"].slider, bannerSliderOptions);
+if (_refs__WEBPACK_IMPORTED_MODULE_0__["default"].slider) {
+  const bannerSlider = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_refs__WEBPACK_IMPORTED_MODULE_0__["default"].slider, bannerSliderOptions);
 
-_refs__WEBPACK_IMPORTED_MODULE_0__["default"].sliderBtnPrev.addEventListener("click", () => {
-  bannerSlider.slidePrev();
-});
+  _refs__WEBPACK_IMPORTED_MODULE_0__["default"].sliderBtnPrev.addEventListener("click", () => {
+    bannerSlider.slidePrev();
+  });
 
-_refs__WEBPACK_IMPORTED_MODULE_0__["default"].sliderBtnNext.addEventListener("click", () => {
-  bannerSlider.slideNext();
-});
+  _refs__WEBPACK_IMPORTED_MODULE_0__["default"].sliderBtnNext.addEventListener("click", () => {
+    bannerSlider.slideNext();
+  });
+}
 
 
 /***/ }),
@@ -21870,16 +21872,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-window.addEventListener("scroll", lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default()(headerBgHandler, 100));
 _refs__WEBPACK_IMPORTED_MODULE_0__["default"].formCaclWork.addEventListener("submit", _form_handler__WEBPACK_IMPORTED_MODULE_2__.formHandler);
 _refs__WEBPACK_IMPORTED_MODULE_0__["default"].formFileInput.addEventListener("change", _form_handler__WEBPACK_IMPORTED_MODULE_2__.filevalidation);
+window.addEventListener("scroll", lodash_debounce__WEBPACK_IMPORTED_MODULE_1___default()(headerBgHandler, 100));
 
 function headerBgHandler() {
   let scrollYValue = window.pageYOffset;
 
   scrollYValue > 10
-    ? _refs__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.add("bg-dark-transparent")
-    : _refs__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.remove("bg-dark-transparent");
+    ? _refs__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.add("bg-transparent")
+    : _refs__WEBPACK_IMPORTED_MODULE_0__["default"].header.classList.remove("bg-transparent");
 }
 
 })();

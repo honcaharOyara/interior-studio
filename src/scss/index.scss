@@ -50,14 +50,11 @@
 // Components
 @import "./components/header";
 @import "./components/modal-send-request";
-@import "./components/contact";
 @import "./components/contact-link";
 @import "./components/socials";
 @import "./components/footer";
 
 // ======== Pages ========
-// Main
-@import "./pages/main/banner";
-@import "./pages/main/philosofy";
-@import "./pages/main/projects";
-@import "./pages/main/lorem";
+@import "./pages/main/main";
+@import "./pages/blog/main";
+@import "./pages/contacts";

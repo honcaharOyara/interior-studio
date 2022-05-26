@@ -9,12 +9,14 @@ const bannerSliderOptions = {
   simulateTouch: false,
 };
 
-const bannerSlider = new Swiper(refs.slider, bannerSliderOptions);
+if (refs.slider) {
+  const bannerSlider = new Swiper(refs.slider, bannerSliderOptions);
 
-refs.sliderBtnPrev.addEventListener("click", () => {
-  bannerSlider.slidePrev();
-});
+  refs.sliderBtnPrev.addEventListener("click", () => {
+    bannerSlider.slidePrev();
+  });
 
-refs.sliderBtnNext.addEventListener("click", () => {
-  bannerSlider.slideNext();
-});
+  refs.sliderBtnNext.addEventListener("click", () => {
+    bannerSlider.slideNext();
+  });
+}
