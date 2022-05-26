@@ -1,0 +1,14 @@
+.contact__link {
+  &-item {
+    margin-right: 30px;
+    font-weight: $font-weight-bold;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06em;
+    color: rgba($white, 0.9);
+
+    &:hover {
+      color: rgba($white, 1);
+    }
+  }
+}

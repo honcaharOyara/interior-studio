@@ -21,6 +21,12 @@ input::-webkit-inner-spin-button {
   color: #080808;
 }
 
+.block-title {
+  font-style: normal;
+  font-size: rem(16px);
+  line-height: rem(22px);
+}
+
 .btn-white,
 .btn-transparent,
 .btn-black {
@@ -81,25 +87,6 @@ input::-webkit-inner-spin-button {
 
   &:hover {
     background-color: rgba($popup_title, 0.9);
-  }
-}
-
-.socials {
-  &__item {
-    margin-right: 16px;
-    list-style: none;
-  }
-
-  &__link {
-    font-weight: $font-weight-bold;
-    font-size: rem(11px);
-    line-height: rem(13px);
-    letter-spacing: 0.06em;
-    color: rgba($white, 1);
-
-    &:hover {
-      color: rgba($white, 0.7);
-    }
   }
 }
 

@@ -1,5 +1,6 @@
 .projects {
   padding: 140px 0;
+  overflow: hidden;
   background-color: $black;
 
   &__title-box {
@@ -119,6 +120,7 @@
       width: 100%;
       top: 100px;
       z-index: 200;
+      pointer-events: none;
     }
   }
 

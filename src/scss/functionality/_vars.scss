@@ -32,7 +32,7 @@ $btn-focus-width: none;
 $navbar-padding-y: 24px;
 $navbar-brand-font-size: $font-size-root;
 $navbar-brand-height: 17px;
-$navbar-light-color: rgba($white, 0.7);
+$navbar-light-color: rgba($white, 0.8);
 $navbar-light-hover-color: rgba($white, 1);
 $navbar-light-active-color: rgba($white, 0.9);
 $navbar-light-disabled-color: rgba($black, 0.3);
@@ -60,3 +60,5 @@ $input_border_color: rgba(214, 214, 214, 0.3);
 $check_dot_color: #afb0b2;
 $check_bg_color: #f7f7f6;
 $check_bg_color_checked: #1d1f26;
+
+$footer_text_color: rgba(130, 130, 130, 1);

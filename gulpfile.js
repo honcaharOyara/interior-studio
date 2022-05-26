@@ -43,7 +43,12 @@ const path = {
 
 function buildHtml(srcPath, buildPath) {
   return src(srcPath)
-    .pipe(fileInclude())
+    .pipe(
+      fileInclude({
+        prefix: "@@",
+        basepath: "./src/components",
+      })
+    )
     .pipe(
       htmlmin({
         collapseWhitespace: true,

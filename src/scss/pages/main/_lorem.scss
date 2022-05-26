@@ -1,0 +1,71 @@
+.lorem {
+  padding: 100px 0;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    padding: 345px 0;
+  }
+
+  &__text {
+    font-size: rem(14px);
+    line-height: rem(24px);
+    color: rgba($black, 0.5);
+  }
+
+  &__images {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  &__img {
+    display: block;
+    position: absolute;
+    filter: drop-shadow(0px 0px 64px rgba(0, 0, 0, 0.16));
+    z-index: 5;
+
+    &:nth-child(1) {
+      top: 184px;
+      left: -141px;
+    }
+
+    &:nth-child(2) {
+      left: -127px;
+      bottom: -90px;
+    }
+
+    &:nth-child(3) {
+      top: 62px;
+      left: 144px;
+      z-index: 10;
+    }
+
+    &:nth-child(4) {
+      left: 278px;
+      bottom: 61px;
+    }
+
+    &:nth-child(5) {
+      top: -144px;
+      right: 318px;
+      z-index: 10;
+    }
+
+    &:nth-child(6) {
+      right: 453px;
+      bottom: -47px;
+    }
+
+    &:nth-child(7) {
+      top: 62px;
+      right: 111px;
+    }
+
+    &:nth-child(8) {
+      right: -87px;
+      bottom: 104px;
+    }
+  }
+}

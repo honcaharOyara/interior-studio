@@ -1,0 +1,63 @@
+@import "../functionality/vars";
+
+.contacts-page {
+  position: relative;
+
+  > .contacts {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+  }
+}
+
+.contacts {
+  padding: 118px 0 0 0;
+  overflow: hidden;
+  background: url("../img/contacts-bg.jpg") center / cover;
+
+  &__text,
+  &__link {
+    font-weight: $font-weight-lighter;
+    color: rgba($white, 0.7);
+    transition: color 0.2s ease;
+  }
+
+  &__content {
+    margin-bottom: 70px;
+  }
+
+  .socials {
+    margin-top: 15px;
+  }
+
+  .socials__list {
+    padding: 0;
+  }
+
+  .btn-white {
+    margin-bottom: 123px;
+  }
+
+  &__text {
+    margin-bottom: 72px;
+    max-width: 390px;
+    font-size: rem(14px);
+    line-height: rem(24px);
+  }
+
+  &__link {
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06em;
+
+    &:hover {
+      color: rgba($white, 1);
+    }
+  }
+}
