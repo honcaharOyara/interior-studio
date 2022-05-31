@@ -17,6 +17,12 @@
     color: rgba($white, 0.5);
   }
 
+  @include media-breakpoint-down(lg) {
+    &__text {
+      margin: 0;
+    }
+  }
+
   &__portfolio {
     margin-bottom: 111px;
   }

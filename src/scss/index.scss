@@ -2,10 +2,10 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-@import "./functionality/vars";
-@import "./functionality/functions";
-@import "./functionality/mixins";
-@import "./fonts";
+@import "functionality/vars";
+@import "functionality/functions";
+@import "functionality/mixins";
+@import "fonts";
 
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/root";
@@ -44,21 +44,23 @@
 @import "../../node_modules/swiper/swiper.scss";
 
 // Common styles
-@import "./custom-styles";
-@import "./keyframes";
+@import "custom-styles";
+@import "keyframes";
 
 // Components
-@import "./components/header";
-@import "./components/modal-send-request";
-@import "./components/contact-link";
-@import "./components/socials";
-@import "./components/filter-block";
-@import "./components/block-paginate";
-@import "./components/block-share";
-@import "./components/footer";
+@import "components/header";
+@import "components/modal-send-request";
+@import "components/contact-link";
+@import "components/socials";
+@import "components/filter-block";
+@import "components/block-paginate";
+@import "components/block-share";
+@import "components/footer";
 
 // ======== Pages ========
-@import "./pages/main/main";
-@import "./pages/blog/main";
-@import "./pages/contacts";
-@import "./pages/one-news";
+@import "pages/main/main";
+@import "pages/blog/main";
+@import "pages/contacts/contacts";
+@import "pages/one-news/one-news";
+@import "pages/projects/projects";
+@import "pages/one-project/one-project";

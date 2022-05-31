@@ -1,0 +1,40 @@
+@import "./src/scss/functionality/functions";
+
+.projects-page-bg {
+  background-color: $popup_peloader_color;
+}
+
+.projects-page {
+  .projects__text {
+    color: $sectin_text_color;
+  }
+
+  .btn-white {
+    color: $sectin_text_color;
+    border: 1px solid $sectin_text_color;
+    background-color: initial;
+
+    &:hover {
+      background-color: rgba($sectin_text_color, .2);
+    }
+  }
+
+  &__filter {
+    margin: 210px 0 124px;
+  }
+
+  .projects {
+    background-color: initial;
+  }
+
+  &__text {
+    font-weight: $font-weight-lighter;
+    color: $sectin_text_color;
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__text {
+      margin-left: 72px;
+    }
+  }
+}

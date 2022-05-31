@@ -1,0 +1,139 @@
+@import "src/scss/functionality/functions";
+
+.one-project-bg {
+  background-color: $popup_peloader_color;
+}
+
+.one-project {
+  &__banner {
+    margin-bottom: 140px;
+    padding: 262px 0 40px 0;
+    background: url("../img/one-project/banner.jpg") fixed center/ cover;
+  }
+
+  .btn-transparent {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .block-share__title {
+    margin: 0 20px 0 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .block-share__title {
+      margin: 0 111px 0 40px;
+    }
+  }
+
+  &__text {
+    color: $sectin_text_color;
+    opacity: 0.7;
+  }
+
+  &__banner-text {
+    margin-bottom: 64px;
+    max-width: 462px;
+  }
+
+  &__info-list {
+    margin-bottom: 198px;
+  }
+
+  &__info-item {
+    padding-left: 28px;
+    position: relative;
+    list-style: none;
+    font-weight: $font-weight-normal;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06em;
+    color: $white;
+
+    &:nth-child(1) {
+      &::before {
+        background: url("../img/icons/icons.svg#project-info-1") center / cover;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        background: url("../img/icons/icons.svg#project-info-2") center / cover;
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        background: url("../img/icons/icons.svg#project-info-3") center / cover;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-65%);
+    }
+  }
+
+  &__about {
+    margin-bottom: 140px;
+  }
+
+  &__about-title {
+    margin-bottom: 17px;
+    font-weight: $font-weight-bolder;
+    color: $sectin_text_color;
+
+    & + p {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__gallery {
+    margin-bottom: 140px;
+
+    .container-fluid {
+      margin-bottom: 80px;
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__preview {
+    padding-top: 110px;
+    background-color: $sectin_text_color;
+  }
+
+  &__next-project {
+    padding-top: 128px;
+    background-color: $modal-backdrop-bg;
+
+    h2 {
+      margin-bottom: 128px;
+    }
+
+    img {}
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__pre-title {
+    margin-bottom: 16px;
+    font-weight: $font-weight-bolder;
+    font-size: rem(8px);
+    line-height: rem(14px);
+    letter-spacing: 0.2em;
+    color: $footer_text_color;
+  }
+
+
+}

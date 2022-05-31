@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HILIGHT Projects</title>
+  @@include('head-links.html')
+</head>
+<body class="projects-page-bg">
+@@include('section-header.html', { "color":"black" })
+<main class="projects-page">
+  <section class="projects-page__filter">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="section-title projects-page__main-title">Our Projects</h2>
+        </div>
+        <div class="col-lg-6">
+          <p class="projects-page__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper eu mauris vitae posuere. Ut at
+            luctus ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium velit.</p>
+          @@include('filter-block.html', {
+          "justify-content":"end",
+          "btns": {
+          "btn-1":"House",
+          "btn-2":"Apartments",
+          "btn-3":"Commerce",
+          "btn-4":"Architecture"
+          }
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="projects">
+    <div class="container-fluid">
+      <div class="row projects__portfolio">
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="one-project.html">
+            <img
+                class="img-6"
+                src="../img/main/main_projs-img-1.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="one-project.html">
+            <img
+                class="img-6"
+                src="../img/main/main_projs-img-2.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-12 projects__portfolio-item">
+          <a class="position-relative" href="one-project.html">
+            <img
+                class="img-12"
+                src="../img/main/main_projs-img-3.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="one-project.html">
+            <img
+                class="img-6"
+                src="../img/main/main_projs-img-4.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="one-project.html">
+            <img
+                class="img-6"
+                src="../img/main/main_projs-img-6.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-12 projects__portfolio-item">
+          <a class="position-relative" href="one-project.html">
+            <img
+                class="img-12"
+                src="../img/main/main_projs-img-7.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="container-xl">
+        <div class="position-relative projects__preview">
+          <div class="projects__info-box">
+            <div class="row">
+              <div class="col-lg-4">
+                <h2 class="fw-bolder sections-title">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h2>
+              </div>
+            </div>
+            <div class="row justify-content-lg-end">
+              <div class="col-lg-5">
+                <p class="mb-5 text-start text-black projects__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam ullamcorper eu mauris vitae posuere. Ut at luctus
+                  ligula. Nunc ante felis, aliquam eu enim sed, ornare pretium
+                  velit.
+                </p>
+                <button
+                    type="button"
+                    class="btn-white"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                >
+                  Send Request
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="position-relative projects__abra-cadabra-wrap">
+            <div class="position-relative projects__abra-cadabra">
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-1.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-2.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-3.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-4.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-5.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="position-absolute projects__abra-cadabra">
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-1.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-2.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-3.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-4.jpg" alt=""/>
+              </div>
+              <div class="position-absolute projects__cadabra">
+                <img src="../img/main/projects-prev-img-5.jpg" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+@@include('block-footer.html', {
+"color":"black"
+})
+</body>
+</html>

@@ -50,6 +50,7 @@ input::-webkit-inner-spin-button {
   background-color: $white;
   color: rgba($black, 1);
   transition: background-color 0.2s ease;
+  pointer-events: auto;
 
   &:hover,
   &:active,
@@ -66,6 +67,8 @@ input::-webkit-inner-spin-button {
 }
 
 .btn-transparent {
+  transition: background-color .2s ease;
+
   &,
   &:active,
   &:focus {
@@ -76,6 +79,20 @@ input::-webkit-inner-spin-button {
   &:hover {
     background-color: rgba($white, 0.2);
     border-color: rgba($white, 1);
+  }
+
+  &.--black {
+    &,
+    &:active,
+    &:focus {
+      background-color: initial;
+      border-color: rgba($black, 0.32);
+    }
+
+    &:hover {
+      background-color: rgba($black, 0.2);
+      border-color: rgba($black, 1);
+    }
   }
 }
 
