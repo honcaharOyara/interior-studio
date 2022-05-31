@@ -1,0 +1,36 @@
+@import "../../functionality/functions";
+
+.news {
+  &__item {
+    padding: 50px 72px;
+    background-color: $news_item_bg;
+
+    a {
+      background-color: initial;
+    }
+  }
+
+  .news-block-title {
+    font-weight: $font-weight-bolder;
+    font-size: rem(28px);
+    line-height: rem(34px);
+    color: $sectin_text_color;
+  }
+
+  .news-block-text {
+    font-weight: $font-weight-lighter;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    color: $sectin_text_color;
+    opacity: 0.7;
+  }
+
+  .discover-link-box {
+    a {
+      &::before {
+        background-color: initial;
+      }
+    }
+  }
+}
+

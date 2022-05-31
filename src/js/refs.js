@@ -4,6 +4,8 @@ export default {
 
   dropdowns: document.querySelectorAll(".dropdown"),
 
+  newsSlider: document.querySelector(".one-news__slider"),
+
   slider: document.querySelector(".banner__slider"),
   sliderBtnPrev: document.querySelector(".banner__slider-btn-prev"),
   sliderBtnNext: document.querySelector(".banner__slider-btn-next"),

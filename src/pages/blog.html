@@ -1,13 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HILIGHT Blog</title>
-    @@include('head-links.html')
-  </head>
-  <body>
-    @@include('section-header.html', { "color":"black" })
-  </body>
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HILIGHT Blog</title>
+  @@include('head-links.html')
+</head>
+<body>
+@@include('section-header.html', { "color":"black" })
+<main class="blog-page">
+  <section class="filter">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="section-title filter__title">Our latest news</h2>
+        </div>
+        <div class="col-lg-6 row justify-content-lg-end align-items-center">
+          @@include('filter-block.html', {
+          "justify-content":"end",
+          "btns": {
+          "btn-1":"All",
+          "btn-2":"Blog",
+          "btn-3":"News",
+          "btn-4":"Advice from the designer"
+          }
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="news">
+    <div class="container-fluid">
+      <div class="row news__container">
+        <div class="d-flex align-items-end col-md-6 projects__portfolio-item news__item">
+          <div class="col">
+            <h3 class="mb-3 news-block-title">5 smart tips for productive collaboration with the designer</h3>
+            <p class="mb-5 news-block-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida
+              urna. Donec blandit sapien eu diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam.</p>
+            <div class="discover-link-box --black">
+              <a class="text-uppercase text-decoration-none" href="#"
+              >discover more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="./one-news.html">
+            <img
+                class="img-6"
+                src="../img/blog/blog_img-0.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="./one-news.html">
+            <img
+                class="img-6"
+                src="../img/blog/blog_img-0.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="./one-news.html">
+            <img
+                class="img-12"
+                src="../img/blog/blog_img-0.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="col-md-6 projects__portfolio-item">
+          <a class="position-relative" href="./one-news.html">
+            <img
+                class="img-6"
+                src="../img/blog/blog_img-0.jpg"
+                alt="Projects"
+            />
+            <ul
+                class="d-flex gap-4 position-absolute projects__portfolio-proj-info"
+            >
+              <li>Lodz</li>
+              <li>16.10.2018</li>
+              <li>80 sq.m</li>
+            </ul>
+            <p class="position-absolute projects__portfolio-proj-name">
+              Residence by the lighthouse
+            </p>
+          </a>
+        </div>
+        <div class="d-flex align-items-end col-md-6 projects__portfolio-item news__item">
+          <div class="col">
+            <h3 class="mb-3 news-block-title">5 smart tips for productive collaboration with the designer</h3>
+            <p class="mb-5 news-block-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel gravida
+              urna. Donec blandit sapien eu diam ullamcorper euismod. Nam tempus pellentesque ligula ut aliquam.</p>
+            <div class="discover-link-box --black">
+              <a class="text-uppercase text-decoration-none" href="#"
+              >discover more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  @@include('block-pagination.html')
+  <div class="footer-bg">
+    <section class="blog-footer">
+      <div class="container-xl">
+        <div class="row mb-4">
+          <div class="col-md-5">
+            <h2 class="section-title text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-md-5">
+            <p class="opacity-50 text-white fw-lighter mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Aliquam ullamcorper eu mauris
+              vitae posuere. Ut at luctus ligula. Nunc ante felis, aliquam.</p>
+            <form class="position-relative">
+              <input type="email" class="form-control blog-footer__input" placeholder="Email" required>
+              <button class="blog-footer__btn" type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    @@include('block-footer.html')
+
+  </div>
+</main>
+</body>
 </html>

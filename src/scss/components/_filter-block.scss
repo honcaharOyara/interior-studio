@@ -1,0 +1,55 @@
+@import "../functionality/functions";
+
+.filter-block {
+  &__box {
+    gap: 32px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__box {
+      gap: 15px;
+
+    }
+  }
+
+  &__wrap {
+    width: fit-content;
+  }
+
+  &__btn {
+    padding: 0;
+    position: relative;
+    font-weight: $font-weight-bold;
+    font-size: rem(11px);
+    line-height: rem(13px);
+    letter-spacing: 0.06em;
+    color: $footer_text_color;
+    border: none;
+    background: none;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      background-color: $footer_text_color;
+      transition: width .2s ease;
+    }
+
+    &:hover,
+    &.clicked {
+      color: $modal-backdrop-bg;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

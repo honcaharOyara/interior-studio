@@ -1,0 +1,9 @@
+.filter {
+  margin: 184px 0 124px;
+
+  @include media-breakpoint-down(lg) {
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}

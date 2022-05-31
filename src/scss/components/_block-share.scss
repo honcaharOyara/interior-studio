@@ -1,0 +1,24 @@
+.block-share {
+  &__title {
+    font-weight: $font-weight-normal;
+    line-height: 170.66%;
+    color: $sectin_text_color;
+  }
+
+  &__list {
+    padding: 0;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    img {
+      max-width: 50px;
+      width: 100%;
+    }
+  }
+}

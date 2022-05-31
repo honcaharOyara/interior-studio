@@ -176,6 +176,7 @@
 .header.white {
   &.bg-transparent {
     background-color: rgba($black, 0.6) !important;
+    backdrop-filter: blur(5px);
   }
 
   .header__logo {
@@ -216,7 +217,8 @@
 
 .black.header {
   &.bg-transparent {
-    background-color: rgba($white, 0.6) !important;
+    background-color: rgba($white, 0.9) !important;
+    backdrop-filter: blur(5px);
   }
 
   .header__logo {

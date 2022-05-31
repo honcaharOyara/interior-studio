@@ -1,0 +1,129 @@
+@import "../functionality/functions";
+
+.one-news-bg {
+  background-color: $one-news-bg;
+}
+
+.one-news {
+  margin-top: 210px;
+
+  &__about-item {
+    list-style: none;
+
+    &.--unordered {
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 50%;
+        left: -16px;
+        transform: translateY(-50%);
+        background: url("../img/icons/icons.svg#list-elipse") center/ cover;
+      }
+    }
+  }
+
+  &__about-item,
+  &__text {
+    opacity: .7;
+    color: $sectin_text_color;
+  }
+
+  &__title {
+    font-weight: $font-weight-bolder;
+    font-size: rem(16px);
+    line-height: rem(22px);
+    color: $sectin_text_color;
+  }
+
+  &__main-title {
+    & + p {
+      margin-bottom: 96px;
+    }
+  }
+
+  &__banner {
+    margin-bottom: 96px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__about {
+    p {
+      &:last-child {
+        margin-bottom: 96px;
+      }
+    }
+  }
+
+  &__gallery {
+    margin-bottom: 96px;
+
+    img  {
+      width: 100%;
+    }
+  }
+  
+  &__line {
+    margin-bottom: 140px;
+    background-color: $footer_text_color;
+    opacity: 0.16;
+  }
+
+  &__latest-news {
+    margin-bottom: 140px;
+
+    h2 {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__slide {
+    max-width: 316px;
+
+    a {
+      display: block;
+    }
+  }
+
+  &__slide-img-box {
+    margin-bottom: 24px;
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+
+    img {
+      width: 100%;
+      transition: transform .2s ease;
+    }
+  }
+
+  &__slide-title {
+    margin-bottom: 16px;
+    color: rgba($popup_title, .8);
+    font-weight: $font-weight-bolder;
+    font-size: rem(14px);
+    line-height: rem(19px);
+    transition: color .2s ease;
+
+    &:hover {
+      color: $popup_title;
+    }
+  }
+
+  &__slide-date {
+    font-size: rem(10px);
+    line-height: rem(17px);
+    color: $footer_text_color;
+  }
+}

@@ -1,0 +1,29 @@
+.pagination {
+  .page-link {
+    color: $modal-backdrop-bg;
+    border: none;
+  }
+
+  .paginate-prev,
+  .paginate-next {
+    margin-bottom: 3px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    transition: opacity .2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .paginate-prev{
+    background: url("../img/icons/icons.svg#arrow-paginate-left") center / cover;
+  }
+
+  .paginate-next{
+    background: url("../img/icons/icons.svg#arrow-paginate-right") center / cover;
+  }
+
+}

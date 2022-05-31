@@ -15,3 +15,4 @@ function headerBgHandler() {
     ? refs.header.classList.add("bg-transparent")
     : refs.header.classList.remove("bg-transparent");
 }
+headerBgHandler();
