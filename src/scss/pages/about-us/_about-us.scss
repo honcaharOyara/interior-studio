@@ -1,0 +1,79 @@
+.about-us-bg {
+  margin-top: 69px;
+  background-color: $popup_peloader_color;
+}
+
+@include media-breakpoint-up(lg) {
+  .about-us-bg {
+    margin-top: 92px;
+  }
+}
+
+.about-us {
+  &__banner {
+    margin-bottom: 140px;
+    padding: 230px 0;
+    background: url("../img/about-us/about-us__banner.jpg") fixed center / cover;
+  }
+
+  &__philosophy {
+    margin-bottom: 140px;
+  }
+
+  &__slide-content {
+    position: relative;
+    z-index: 1;
+    width: 0;
+    transition: all .4s ease;
+    opacity: 0;
+  }
+
+  &__slide.swiper-slide-active {
+    .about-us__slide-content {
+      width: 50%;
+      opacity: 1;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__slide.swiper-slide-active {
+      .about-us__slide-content {
+        width: 50%;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__slide {
+      .about-us__slide-content {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    &__slide.swiper-slide-active {
+      .about-us__slide-content {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__slide-title {
+    font-weight: $font-weight-bolder;
+    font-size: rem(36px);
+    line-height: rem(44px);
+    color: $modal-backdrop-bg;
+  }
+
+  &__slide-img {
+    position: relative;
+    z-index: 2;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

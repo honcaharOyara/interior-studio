@@ -8772,11 +8772,13 @@ __webpack_require__.r(__webpack_exports__);
 
   dropdowns: document.querySelectorAll(".dropdown"),
 
-  newsSlider: document.querySelector(".one-news__slider"),
-
   slider: document.querySelector(".banner__slider"),
   sliderBtnPrev: document.querySelector(".banner__slider-btn-prev"),
   sliderBtnNext: document.querySelector(".banner__slider-btn-next"),
+
+  newsSlider: document.querySelector(".one-news__slider"),
+
+  aboutUsSlider: document.querySelector(".about-us__slider"),
 
   modalCalcWork: document.getElementById("exampleModal"),
   modalPreloader: document.querySelector(".popup__preloader"),
@@ -8851,6 +8853,23 @@ if (_refs__WEBPACK_IMPORTED_MODULE_0__["default"].newsSlider) {
         spaceBetween: 48,
         slidesPerView: 3,
         centeredSlides: true,
+    });
+}
+
+if (_refs__WEBPACK_IMPORTED_MODULE_0__["default"].aboutUsSlider) {
+    const swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](_refs__WEBPACK_IMPORTED_MODULE_0__["default"].aboutUsSlider, {
+        speed: 400,
+        spaceBetween: 12,
+        centeredSlides: true,
+        breakpoints: {
+            319: {
+                slidesOffsetBefore: 0,
+            },
+            992: {
+                slidesOffsetBefore: 100,
+                width: 1067,
+            },
+        }
     });
 }
 

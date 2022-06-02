@@ -50,3 +50,20 @@ if (refs.newsSlider) {
         centeredSlides: true,
     });
 }
+
+if (refs.aboutUsSlider) {
+    const swiper = new Swiper(refs.aboutUsSlider, {
+        speed: 400,
+        spaceBetween: 12,
+        centeredSlides: true,
+        breakpoints: {
+            319: {
+                slidesOffsetBefore: 0,
+            },
+            992: {
+                slidesOffsetBefore: 100,
+                width: 1067,
+            },
+        }
+    });
+}
